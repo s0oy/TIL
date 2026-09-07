@@ -7,3 +7,5 @@ if A < B:
     print("Yes")
 else:
     print("No")
+
+    
