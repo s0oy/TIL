@@ -1,56 +1,56 @@
-# # 1. 함수 - 실전
-# def calculate_average(numbers):
-#     return sum(numbers) / len(numbers)
+# 1. 함수 - 실전
+def calculate_average(numbers):
+    return sum(numbers) / len(numbers)
 
-# scores = [80, 90, 75, 95]
+scores = [80, 90, 75, 95]
 
-# result = calculate_average(scores)
+result = calculate_average(scores)
 
-# print(result)   # 85.0
+print(result)   # 85.0
 
-# # 핵심 -> 아래 코드 + 함수 밖에서 결과를 받아서 사용하는 것
-# # def 함수이름(매개변수):
-# #    ...
-# #    return 결과
+# 핵심 -> 아래 코드 + 함수 밖에서 결과를 받아서 사용하는 것
+# def 함수이름(매개변수):
+#    ...
+#    return 결과
 
-# # 2. *arga
-# # 인자를 여러 개 받을 때
-# def add_all(*numbers):    # *numbers는 여러 값을 튜플로 받음
-#     return sum(numbers)
+# 2. *arga
+# 인자를 여러 개 받을 때
+def add_all(*numbers):    # *numbers는 여러 값을 튜플로 받음
+    return sum(numbers)
 
-# print(add_all(10, 20))          # 30
-# print(add_all(10, 20, 30, 40))  # 100
+print(add_all(10, 20))          # 30
+print(add_all(10, 20, 30, 40))  # 100
 
-# # 3. **kwargs
-# # 이름을 붙여서 여러 값을 받을 때
-# # 딕셔너리
-# def show_info(**info):
-#     print(info)
+# 3. **kwargs
+# 이름을 붙여서 여러 값을 받을 때
+# 딕셔너리
+def show_info(**info):
+    print(info)
 
-# show_info(name="명수", age=19, major="AI")  # {'name': '명수', 'age': 19, 'major': 'AI'}
+show_info(name="명수", age=19, major="AI")  # {'name': '명수', 'age': 19, 'major': 'AI'}
 
-# # 4. 예외처리
-# # 프로그램에서 오류가 발생해도 프로그램이 바로 종료되지 않도록 할 수 있음
-# try:
-#     number = int(input("숫자 입력: "))
-#     print(10 / number)
+# 4. 예외처리
+# 프로그램에서 오류가 발생해도 프로그램이 바로 종료되지 않도록 할 수 있음
+try:
+    number = int(input("숫자 입력: "))
+    print(10 / number)
 
-# except ValueError:
-#     print("숫자를 입력하세요.")
+except ValueError:
+    print("숫자를 입력하세요.")
 
-# except ZeroDivisionError:
-#     print("0으로 나눌 수 없습니다.")
+except ZeroDivisionError:
+    print("0으로 나눌 수 없습니다.")
 
-# # 5. 파일 읽기
-# # with을 쓰면 파일을 다 사용한 뒤 자동으로 닫아줌
-# with open("data.txt", "r", encoding="utf-8") as file:
-#     data = file.read()
+# 5. 파일 읽기
+# with을 쓰면 파일을 다 사용한 뒤 자동으로 닫아줌
+with open("data.txt", "r", encoding="utf-8") as file:
+    data = file.read()
 
-# print(data)
+print(data)
 
-# # 파일 저장
-# with open("result.txt", "w", encoding="utf-8") as file:
-#     file.write("분석 결과입니다.")
+# 파일 저장
+with open("result.txt", "w", encoding="utf-8") as file:
+    file.write("분석 결과입니다.")
 
 # 문제1
 # 다음 코드의 출력값은?
